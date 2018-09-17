@@ -1,5 +1,7 @@
 # project-yiqihai
 
+参考：https://github.com/myxingke
+
 项目介绍
 --
 vue.js+node.js+webpack构建的前端项目
