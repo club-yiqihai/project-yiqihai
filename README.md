@@ -51,7 +51,8 @@ vue.js+node.js+webpack构建的前端项目
  - mockjs  前后端分离，前端使用mockjs模拟数据
  - webpack  前端自动打包工具
  - oauth2  安全授权协议
-
+ 
+```
 
 前端界面开发
 --
