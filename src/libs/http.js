@@ -26,11 +26,11 @@ Http.install = function (Vue) {
         return false;
       }
       //如果有给 toast 参数则显示 loading 加载数据
-      if (toast && typeof (toast) === 'boolean') {
-        Vue.prototype.$loading('加载中...');
-      } else if (toast && typeof (toast) === 'string') {
-        Vue.prototype.$loading(toast);
-      }
+      //if (toast && typeof (toast) === 'boolean') {
+        //Vue.prototype.$loading('加载中...');
+     // } else if (toast && typeof (toast) === 'string') {
+        //Vue.prototype.$loading(toast);
+     // }
       if (m.method === 'get') {
         return Vue.prototype.apiGet(m.url, opts);
       } else if (m.method === 'post') {
@@ -39,7 +39,7 @@ Http.install = function (Vue) {
         return false;
       }
     } else {
-      closeLoading();
+     // closeLoading();
       console.log('url 错误', '返回结果：err = ', '无法请求，无效的请求！', '\n');
     }
   };
@@ -51,14 +51,14 @@ Http.install = function (Vue) {
    * @returns {Promise}
    */
   Vue.prototype.apiPost = function (url, data, toast = false) {
-    if (toast && typeof (toast) === 'boolean') {
-      Vue.prototype.$loading('加载中...');
-    } else if (toast && typeof (toast) === 'string') {
-      Vue.prototype.$loading(toast);
-    }
+    //if (toast && typeof (toast) === 'boolean') {
+    //  Vue.prototype.$loading('加载中...');
+   // } else if (toast && typeof (toast) === 'string') {
+    //  Vue.prototype.$loading(toast);
+  //  }
     return new Promise((resolve, reject) => {
       AsInst.post(url, data).then((response) => {
-        setTimeout(() => closeLoading(), 800);
+      //  setTimeout(() => closeLoading(), 800);
         resolve(response.data);
       }).catch((error) => {
         if (error.status === 200) {
@@ -76,7 +76,7 @@ Http.install = function (Vue) {
           Message.error('服务请求出错');
           console.log('Customize Notice', error);
         }
-        closeLoading();
+        //closeLoading();
         reject(error);
       });
     });
@@ -88,16 +88,16 @@ Http.install = function (Vue) {
    * @returns {Promise}
    */
   Vue.prototype.apiGet = function (url, data, toast = false) {
-    if (toast && typeof (toast) === 'boolean') {
-      Vue.prototype.$loading('加载中...');
-    } else if (toast && typeof (toast) === 'string') {
-      Vue.prototype.$loading(toast);
-    }
+    //if (toast && typeof (toast) === 'boolean') {
+     // Vue.prototype.$loading('加载中...');
+    //} else if (toast && typeof (toast) === 'string') {
+    //  Vue.prototype.$loading(toast);
+   // }
     return new Promise((resolve, reject) => {
       AsInst.get(url, {
         params: data
       }).then((response) => {
-        setTimeout(() => closeLoading(), 800);
+        //setTimeout(() => closeLoading(), 800);
         resolve(response.data);
       }).catch((error) => {
         if (error.status === 200) {
@@ -115,7 +115,7 @@ Http.install = function (Vue) {
           Message.error('服务请求出错');
           console.log('Customize Notice', error);
         }
-        closeLoading();
+       // closeLoading();
         reject(error);
       });
     });
@@ -123,8 +123,8 @@ Http.install = function (Vue) {
   /**
    * 关闭方法
    */
-  function closeLoading() {
-    Vue.prototype.$loading.close();
-  }
+ // function closeLoading() {
+    //Vue.prototype.$loading.close();
+  //}
 };
 export default Http;

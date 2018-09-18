@@ -7,6 +7,7 @@ import router from './router'
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';
 import Http from './libs/http';
+import './mock/index'
 
 Vue.use(iView);
 Vue.use(Http);
