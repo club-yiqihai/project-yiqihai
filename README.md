@@ -1,48 +1,46 @@
 # project-yiqihai
 
-参考：https://github.com/myxingke
-参考博客：https://blog.csdn.net/xiaoping_1988/article/details/80073209
-github: https://github.com/xiaoping1988/vue-template-proj
+    参考：https://github.com/myxingke
+    参考博客：https://blog.csdn.net/xiaoping_1988/article/details/80073209
+    github: https://github.com/xiaoping1988/vue-template-proj
 
 项目介绍
 --
-vue.js+node.js+webpack构建的前端项目
+    vue.js+node.js+webpack构建的前端项目
 
 项目展示
 --
-地址：
+    地址：
 
 
 项目目录结构
 --
 
-```
-├── build  构建脚本目录
-    ├── build.js  生成环境构建脚本
-    ├── check-versions.js  检查npm，node.js版本 
-    ├── utils.js  构建相关工具方法
-    ├── vue-loader.conf.js  配置了css加载器以及编译css之后自动添加前缀
-    ├── webpack.base.config.js  webpack基本配置
-    ├── webpack.dev.config.js  webpack开发环境配置
-    ├── webpack.prod.config.js  webpack生成环境配置
-├── config  项目配置
-    ├── dev.env.js  开发环境变量
-    ├── index.js  项目配置文件
-    ├── prod.env.js  生产环境变量
-├── node_modules  npm加载的项目依赖模块
-├── src
-    ├── assets  静态资源目录，会被webpack构建
-    ├── compinents 
-    ├── router  路由配置
-    ├── store  状态管理
-    ├── App.vue  入口页面
-    ├── axios.js  axios配置
-    ├── main.js  main.js
-├── static  静态资源目录，如图片、文字等，不会被webpack构建
-├── index.html  首页入口文件，可以添加一些meta信息
-├── package.json  npm包配置文件，定义了项目的npm脚本，依赖包等信息
+    ├── build  构建脚本目录
+        ├── build.js  生成环境构建脚本
+        ├── check-versions.js  检查npm，node.js版本 
+        ├── utils.js  构建相关工具方法
+        ├── vue-loader.conf.js  配置了css加载器以及编译css之后自动添加前缀
+        ├── webpack.base.config.js  webpack基本配置
+        ├── webpack.dev.config.js  webpack开发环境配置
+        ├── webpack.prod.config.js  webpack生成环境配置
+    ├── config  项目配置
+        ├── dev.env.js  开发环境变量
+        ├── index.js  项目配置文件
+        ├── prod.env.js  生产环境变量
+    ├── node_modules  npm加载的项目依赖模块
+    ├── src
+        ├── assets  静态资源目录，会被webpack构建
+        ├── compinents 
+        ├── router  路由配置
+        ├── store  状态管理
+        ├── App.vue  入口页面
+        ├── axios.js  axios配置
+        ├── main.js  main.js
+    ├── static  静态资源目录，如图片、文字等，不会被webpack构建
+    ├── index.html  首页入口文件，可以添加一些meta信息
+    ├── package.json  npm包配置文件，定义了项目的npm脚本，依赖包等信息
 
-```
 
 技术栈
 --
@@ -65,6 +63,7 @@ vue.js+node.js+webpack构建的前端项目
        2. 运行npm install
        3. 运行npm run init 初始化项目
        4. 运行npm run dev 启动前端工程
+       
     - 打包命令：
       运行npm run build
 
@@ -76,7 +75,7 @@ vue.js+node.js+webpack构建的前端项目
 Http状态码
 --
 	在axios.js中拦截异常，并进行处理。
-	目前以写的异常处理有：
+	目前异常处理有：
 		1. 401 清除token信息并跳转到登录页面
 		2. 403 无权限，跳转到首页
     
@@ -118,6 +117,7 @@ Http状态码
             import Axios from 'axios';
             import Qs from 'qs';
     
+    
     iview安装：
     --
     进入项目执行  npm install iview --save
@@ -126,10 +126,12 @@ Http状态码
             import 'iview/dist/styles/iview.css';
             Vue.use(iView);
 
+
     babel-polyfill安装： 解决ie9和一些低版本的高级浏览器对es6新语法的不支持
     --
     进入项目执行  npm install --save-dev babel-polyfill
     引入    在main.js中
+
 
     vuex安装：
     --
