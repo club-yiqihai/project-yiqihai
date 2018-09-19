@@ -1,6 +1,8 @@
 # project-yiqihai
 
 参考：https://github.com/myxingke
+参考博客：https://blog.csdn.net/xiaoping_1988/article/details/80073209
+github: https://github.com/xiaoping1988/vue-template-proj
 
 项目介绍
 --
@@ -40,37 +42,36 @@ vue.js+node.js+webpack构建的前端项目
 ├── index.html  首页入口文件，可以添加一些meta信息
 ├── package.json  npm包配置文件，定义了项目的npm脚本，依赖包等信息
 
+```
 
 技术栈
 --
- - vue2
- - vuex 状态管理store
- - vue-router  vue路由
- - axios  前后端通信，类似ajas
- - iview  UI组件库
- - mockjs  前后端分离，前端使用mockjs模拟数据
- - webpack  前端自动打包工具
- - oauth2  安全授权协议
+     - vue2
+     - vuex 状态管理store
+     - vue-router  vue路由
+     - axios  前后端通信，类似ajas
+     - iview  UI组件库
+     - mockjs  前后端分离，前端使用mockjs模拟数据
+     - webpack  前端自动打包工具
+     - oauth2  安全授权协议
  
-```
 
 前端界面开发
 --
-注：需要安装nodejs
-	
-
- - 启动：
-	 1. 命令行进入项目文件夹
-	 2. 运行npm install
-	 3. 运行npm run init 初始化项目
-	 4. 运行npm run dev 启动前端工程
-- 打包命令：
-	运行npm run build
+    注：需要安装nodejs
+    
+     - 启动：
+       1. 命令行进入项目文件夹
+       2. 运行npm install
+       3. 运行npm run init 初始化项目
+       4. 运行npm run dev 启动前端工程
+    - 打包命令：
+      运行npm run build
 
 打包发布
 --
-1. 运行npm run build后，得到 dist文件+index_prod.html。（index_prod.html为项目的入口html）
-2. 使用nginx发布。（[nginx配置参考文件](https://github.com/smallsnail-wh/interest/blob/master/nginx.conf)）
+    1. 运行npm run build后，得到 dist文件+index_prod.html。（index_prod.html为项目的入口html）
+    2. 使用nginx发布。（[nginx配置参考文件](https://github.com/smallsnail-wh/interest/blob/master/nginx.conf)）
 	
 Http状态码
 --
@@ -78,32 +79,26 @@ Http状态码
 	目前以写的异常处理有：
 		1. 401 清除token信息并跳转到登录页面
 		2. 403 无权限，跳转到首页
+    
 如果你项目启动有错误：
 --
-1. 项目启动报错，请试一下用管理员权限输入命令。
+    项目启动报错，请试一下用管理员权限输入命令。
 
---
 
 前后端分离，数据结构定义（暂定）
 --
     {
-    code: 0, // 状态码,0代表后端逻辑正常,通过此状态码可做统一提示
-    msg: "提示信息", // 后端逻辑错误时,可将提示信息写在此用于提示用户
-    result: {} 或者 []  // 逻辑正常情况下，返给前端的具体数据
+      code: 0, // 状态码,0代表后端逻辑正常,通过此状态码可做统一提示
+      msg: "提示信息", // 后端逻辑错误时,可将提示信息写在此用于提示用户
+      result: {} 或者 []  // 逻辑正常情况下，返给前端的具体数据
     }
---
 
 权限控制
 --
     权限控制分两种：登陆权限和资源权限
 
-统一的错误提示
+新建项目需要考虑的问题
 --
-
-全局组件和全局方法
-
-==================================================================
-新建项目需要考虑的问题：
     1、需要引入哪些js
     2、目录结构如何规划
     3、前后端分离之后,数据结构如何定义
@@ -113,12 +108,9 @@ Http状态码
     7、如何做ajax请求
     8、全局组件和全局方法有哪些
 
-参考博客：https://blog.csdn.net/xiaoping_1988/article/details/80073209
-github: https://github.com/xiaoping1988/vue-template-proj
 
-====================================================================
 组件安装：（为了防止错乱）
-
+--
     axios安装：
     --    
     进入项目执行  npm install axios
@@ -143,8 +135,8 @@ github: https://github.com/xiaoping1988/vue-template-proj
     --
     进入项目执行  npm install vuex --save
 
-================================================================================
 登陆过程，一种前端方案：
+--
     1、检查状态：进入页面时或路由变化时检查是否有登陆状态
     2、如果是登陆状态则查询登陆信息并保存起来，如果没有则跳转到登陆页
     3、在登陆页面，校验用户输入信息是否合法
