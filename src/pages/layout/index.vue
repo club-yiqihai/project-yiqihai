@@ -18,12 +18,12 @@
                 <div class="logo-con" style="text-align: center;">
                     <img :src="logo" style="width: 150px; height: 50px; padding-top: 8px"/>
                 </div>
-                <Submenu v-for="(item,index) in menuData" :name="item.name" :keys="index">
+                <Submenu v-for="item in menuData" :name="item.name" :key="item.id">
                     <template slot="title">
                         <Icon type="ios-navigate"></Icon>
                         {{item.label}}
                     </template>
-                    <MenuItem v-for ="(mi,index) in item.menuitems" :name="mi.name" :keys="index">{{mi.label}}</MenuItem>
+                    <MenuItem v-for ="mi in item.menuitems" :name="mi.name" :key="mi.id">{{mi.label}}</MenuItem>
                 </Submenu>
             </Menu>
         </Sider>

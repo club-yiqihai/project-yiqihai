@@ -10,7 +10,7 @@ export default new Router({
       redirect: '/login'
     },
     {
-      path: '/passport/login',
+      path: '/login',
       name: 'PassportLogin',
       icon: 'home',
       meta: {

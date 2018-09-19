@@ -8,15 +8,16 @@ import iView from 'iview';
 import 'iview/dist/styles/iview.css';
 import Http from './libs/http';
 import './mock/index'
+import store from './store/index'
 
 Vue.use(iView);
 Vue.use(Http);
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

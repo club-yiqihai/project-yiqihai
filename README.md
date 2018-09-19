@@ -52,6 +52,7 @@
      - mockjs  前后端分离，前端使用mockjs模拟数据
      - webpack  前端自动打包工具
      - oauth2  安全授权协议
+     - ES2015  简单来说是javaScript的升级
  
 
 前端界面开发
@@ -136,6 +137,8 @@ Http状态码
     vuex安装：
     --
     进入项目执行  npm install vuex --save
+    引入  在main.js中  import store from './store/store'  并将store添加到Vue中
+          store文件的index.js中  Vue.use(Vuex)
 
 登陆过程，一种前端方案：
 --

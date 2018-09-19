@@ -9,5 +9,7 @@ const methodMap = {
   UserList: {url: '/api/userlist', method: 'get'},
   /** 添加角色 **/ 
   MenuList: {url: '/api/menuList', method: 'get'},
+  /** 用户登陆 **/
+  UserLogin: {url: '/api/userlogin', method: 'post'}
 };
 export default methodMap;
