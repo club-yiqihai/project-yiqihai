@@ -31,6 +31,24 @@ export default new Router({
       },
       component: (resolve) => require(['../pages/layout/index.vue'], resolve),
       children: []
+    },
+    {
+      path: '/gateway/home',
+      name: 'Ghome',
+      icon: 'home',
+      title: '首页',
+      meta: {
+        title: '首页',
+        routeAuth: true
+      },
+      component: (resolve) => require(['../pages/gateway/home.vue'], resolve),
+      children: [
+        {
+          path: '/gateway/active/listactive',
+          name: 'GListActive',
+          component: (resolve) => require(['../pages/gateway/active/list_active.vue'], resolve),
+        }
+      ]
     }
   ]
 })
