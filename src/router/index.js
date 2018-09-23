@@ -47,6 +47,11 @@ export default new Router({
           path: '/gateway/active/listactive',
           name: 'GListActive',
           component: (resolve) => require(['../pages/gateway/active/list_active.vue'], resolve),
+        },
+        {
+          path: '/gateway/album/listmyalbum',
+          name: 'GListMyAlbum',
+          component: (resolve) => require(['../pages/gateway/album/list_my_album.vue'], resolve),
         }
       ]
     }

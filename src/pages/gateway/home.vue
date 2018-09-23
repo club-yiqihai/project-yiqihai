@@ -37,9 +37,11 @@
                             相册管理
                         </template>
                         <MenuGroup title="个人相册">
-                            <MenuItem name="3-1">风景</MenuItem>
-                            <MenuItem name="3-2">人物</MenuItem>
-                            <MenuItem name="3-3">怀旧</MenuItem>
+                            <router-link :to="('/gateway/album/listmyalbum')">
+                                <MenuItem name="3-1">风景</MenuItem>
+                                <MenuItem name="3-2">人物</MenuItem>
+                                <MenuItem name="3-3">怀旧</MenuItem>
+                            </router-link>
                         </MenuGroup>
                         <MenuGroup title="公共相册">
                             <MenuItem name="3-4">风景</MenuItem>
