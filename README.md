@@ -140,6 +140,10 @@ Http状态码
     引入  在main.js中  import store from './store/store'  并将store添加到Vue中
           store文件的index.js中  Vue.use(Vuex)
 
+    wangeditor富文本编辑器插件安装：
+    --
+    进入项目执行 npm install wangeditor
+
 登陆过程，一种前端方案：
 --
     1、检查状态：进入页面时或路由变化时检查是否有登陆状态
@@ -149,4 +153,3 @@ Http状态码
     5、登陆成功则从后端数据中取出session信息
     6、用户退出删除登陆状态
 
-    sss

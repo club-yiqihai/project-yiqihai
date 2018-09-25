@@ -1,6 +1,12 @@
 <style>
+    .gateway-body {
+        background-color: #f8f8f9;
+    }
+
     .gateway-home-main {
-        margin-top: 66px;
+        background: #fff;
+        margin: 80px auto 15px;
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
     }
 
     .gateway-home-issue {
@@ -18,9 +24,13 @@
     }
 </style>
 <template>
-    <div>
-        <div>
-            <Menu mode="horizontal" :theme="light" active-name="1">
+<Layout>
+    <div class="gateway-body">
+        <div style="position:absolute; z-index:9999">
+            <Header :style="{position: 'fixed', width: '100%'}">
+                <div style="float: left;"></div>
+                <div style="float: left;">
+                <Menu mode="horizontal" theme="dark" active-name="1">
                     <MenuItem name="1">
                         <Icon type="ios-paper" />
                         首页
@@ -54,17 +64,27 @@
                     </MenuItem>
                 </Menu>
             </div>
-            <div class="gateway-home-main">
-                <div class="gateway-home-issue">
-                    <div class="gateway-home-row">
-                        <router-view/>
+                <div style="float: right">
+                    <div class="demo-avatar" style="display: inline-block;">
+                        <Avatar icon="ios-person" size="large" />
+                    </div>
+                    <div>
+                        <Icon type="md-notifications-outline"  size="34" inline-block/>
                     </div>
                 </div>
-            </div>
-            <div>
-            </div>
-    </div>
-    
+            </header>
+        </div>
+        <Content style="background: #f8f8f9; minHeight: 800px">
+            <div class="gateway-home-main">
+                    <div class="gateway-home-issue">
+                        <div class="gateway-home-row">
+                            <router-view/>
+                    </div>
+                </div> 
+            </div> 
+        </Content>
+    </div> 
+</Layout>   
 </template>
 
 <script>
