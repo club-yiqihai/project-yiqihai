@@ -28,8 +28,12 @@
     <div class="gateway-body">
         <div style="position:absolute; z-index:9999">
             <Header style="position: fixed; background: #fff; width: 100%; height: 59px; box-shadow: 0 1px 1px rgba(0,0,0,.1);">
-                <div style="float: left;"></div>
-                <div style="float: left;">
+                <div style="float: left;padding-top: 4px;">
+                    <a>
+                        <img src="../../assets/images/logo-header1.png">
+                    </a>
+                </div>
+                <div style="float: left; padding-left: 25px">
                 <Menu mode="horizontal" theme="light" active-name="1">
                     <MenuItem name="1">
                         <div @click="goTo('/gateway/home/home')">
