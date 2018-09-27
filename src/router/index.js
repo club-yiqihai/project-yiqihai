@@ -63,6 +63,11 @@ export default new Router({
           path: '/gateway/active/editactive',
           name: 'GEditActive',
           component: (resolve) => require(['../pages/gateway/active/edit_active.vue'], resolve),
+        },
+        {
+          path: '/gateway/my/myactive',
+          name: 'GMyActive',
+          component: (resolve) => require(['../pages/gateway/my/my_active.vue'], resolve),
         }
       ]
     }

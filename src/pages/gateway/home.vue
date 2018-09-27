@@ -83,8 +83,10 @@
                                     <span>我的主页</span>
                                 </DropdownItem>
                                 <DropdownItem>
-                                    <Icon type="ios-settings-outline" size="16"/>
-                                    我的活动
+                                    <div @click="goTo('/gateway/my/myactive')">
+                                        <Icon type="ios-settings-outline" size="16"/>
+                                        我的活动
+                                    </div>
                                 </DropdownItem>
                                 <DropdownItem>
                                     <Icon type="ios-settings-outline" size="16"/>
