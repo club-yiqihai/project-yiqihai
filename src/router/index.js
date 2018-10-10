@@ -37,6 +37,7 @@ export default new Router({
       name: 'Ghome',
       icon: 'home',
       title: '首页',
+      redirect: '/gateway/home/home',
       meta: {
         title: '首页',
         routeAuth: true
