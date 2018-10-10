@@ -7,7 +7,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/login'
+      redirect: '/gateway/home/home'
     },
     {
       path: '/login',
@@ -33,7 +33,7 @@ export default new Router({
       children: []
     },
     {
-      path: '/gateway/home',
+      path: '/gateway',
       name: 'Ghome',
       icon: 'home',
       title: '首页',
